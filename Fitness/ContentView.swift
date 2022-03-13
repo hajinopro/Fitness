@@ -9,8 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            TabView {
+                Text("Welcome")
+                    .tabItem {
+                        Text("Welcome")
+                    }
+                Text("Excise1")
+                    .tabItem {
+                        Text("Excise1")
+                    }
+                Text("Excise2")
+                    .tabItem {
+                        Text("Excise2")
+                    }
+            }
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+        }
     }
 }
 
