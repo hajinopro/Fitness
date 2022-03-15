@@ -12,10 +12,9 @@ struct ContentView: View {
         ZStack {
             TabView {
                 WelcomeView()
-                ForEach(0..<4) { index in
+                ForEach(0 ..< Exercise.exercises.count) { index in
                     ExerciseView(index: index)
                 }
-                Text("Excise2")
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
         }
