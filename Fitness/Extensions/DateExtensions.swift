@@ -8,9 +8,19 @@
 import Foundation
 
 extension Date {
+    var yearMonthDay: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy MM dd"
+        return formatter.string(from: self)
+    }
+    
     func formatted(as format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter.string(from: self)
+    }
+    
+    func isSameDay(as day: Date) -> Bool {
+        return self.yearMonthDay == day.yearMonthDay
     }
 }

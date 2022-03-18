@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3466FE27E1F7CF0024161D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3466FD27E1F7CF0024161D /* TimerView.swift */; };
 		7A8BEE9B27DD92B100AC2CB3 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEE9727DD92B100AC2CB3 /* squat.mp4 */; };
 		7A8BEE9C27DD92B100AC2CB3 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEE9827DD92B100AC2CB3 /* sun-salute.mp4 */; };
 		7A8BEE9D27DD92B100AC2CB3 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEE9927DD92B100AC2CB3 /* step-up.mp4 */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3466FD27E1F7CF0024161D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		7A8BEE9727DD92B100AC2CB3 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat.mp4; sourceTree = "<group>"; };
 		7A8BEE9827DD92B100AC2CB3 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
 		7A8BEE9927DD92B100AC2CB3 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
@@ -83,8 +85,18 @@
 				7AE08F6B27DE0C070071C251 /* RatingView.swift */,
 				7AF2D5CE27DF55460040D5F9 /* HistoryView.swift */,
 				7AF2D5D427DF607D0040D5F9 /* SuccessView.swift */,
+				7A3466FD27E1F7CF0024161D /* TimerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7ABD30D427E4D38000C8C430 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA119327E0AA9400285DB2 /* Exercise.swift */,
+				7ACA119527E0ACD500285DB2 /* HistoryStore.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7AC2642F27CBA3B700DD0A8E = {
@@ -107,8 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC2643B27CBA3B700DD0A8E /* FitnessApp.swift */,
-				7ACA119327E0AA9400285DB2 /* Exercise.swift */,
-				7ACA119527E0ACD500285DB2 /* HistoryStore.swift */,
+				7ABD30D427E4D38000C8C430 /* Models */,
 				7A8BEEA327DD946800AC2CB3 /* Views */,
 				7AF2D5D627DF62DE0040D5F9 /* Extensions */,
 				7AC2643F27CBA3B700DD0A8E /* Assets.xcassets */,
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3466FE27E1F7CF0024161D /* TimerView.swift in Sources */,
 				7AF2D5CF27DF55460040D5F9 /* HistoryView.swift in Sources */,
 				7AE08F6A27DD9DD00071C251 /* HeaderView.swift in Sources */,
 				7AF2D5D527DF607D0040D5F9 /* SuccessView.swift in Sources */,

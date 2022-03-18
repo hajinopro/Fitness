@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SuccessView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var selectedTab: Int
+    
     var body: some View {
         ZStack {
             VStack {
@@ -27,7 +30,10 @@ struct SuccessView: View {
             }
             VStack {
                 Spacer()
-                Button("Continue") {}
+                Button("Continue") {
+                    dismiss()
+                    selectedTab = 9
+                }
                 .padding(.bottom)
             }
         }
@@ -36,6 +42,6 @@ struct SuccessView: View {
 
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessView()
+        SuccessView(selectedTab: .constant(3))
     }
 }
