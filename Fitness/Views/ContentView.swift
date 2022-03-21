@@ -20,7 +20,6 @@ struct ContentView: View {
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .environmentObject(HistroyStore())
     }
 }
 

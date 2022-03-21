@@ -18,7 +18,7 @@ struct ExerciseView: View {
     @State private var showSuccess = false
     @State private var timerDone = false
     @State private var showTimer = false
-    @EnvironmentObject var history: HistroyStore
+    @EnvironmentObject var history: HistoryStore
     
     var body: some View {
         GeometryReader { geometry in
@@ -70,7 +70,7 @@ struct ExerciseView: View {
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
         ExerciseView(selectedTab: .constant(0), index: 0)
-            .environmentObject(HistroyStore())
+            .environmentObject(HistoryStore())
     }
 }
 

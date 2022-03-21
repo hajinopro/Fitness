@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @EnvironmentObject var history: HistroyStore
+    @EnvironmentObject var history: HistoryStore
     @Binding var showHistory: Bool
     
     var body: some View {
@@ -17,7 +17,7 @@ struct HistoryView: View {
                 Image(systemName: "xmark.circle")
             }
             .font(.title)
-            .padding(.trailing)
+            .padding([.top, .trailing])
             VStack {
                 Text("History")
                     .font(.title)
@@ -42,6 +42,6 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView(showHistory: .constant(true))
-            .environmentObject(HistroyStore())
+            .environmentObject(HistoryStore())
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension HistroyStore {
+extension HistoryStore {
     func createDevData() {
         exerciseDays = [
             ExerciseDay(
