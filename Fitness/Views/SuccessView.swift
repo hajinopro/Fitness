@@ -34,6 +34,7 @@ struct SuccessView: View {
                     selectedTab = 9
                     dismiss()
                 }
+                .buttonStyle(EmbossedButtonStyle(buttonShape: .capsule))
                 .padding(.bottom)
             }
         }

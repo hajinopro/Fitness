@@ -65,18 +65,7 @@ struct HistoryView: View {
                 if layout == .list {
                     HistoryListView()
                 } else {
-                    Form {
-                        ForEach(history.exerciseDays) { day in
-                            Section {
-                                ForEach(day.exercises, id: \.self) { exercise in
-                                    Text(exercise)
-                                }
-                            } header: {
-                                Text(day.date.formatted(as: "MMM dd"))
-                                    .font(.headline)
-                            }
-                        }
-                    }
+                    HistoryBarView()
                 }
             }
         }

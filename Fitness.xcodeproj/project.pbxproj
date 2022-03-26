@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A3466FE27E1F7CF0024161D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3466FD27E1F7CF0024161D /* TimerView.swift */; };
 		7A640BD127E9E41600B2FB4D /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A640BD027E9E41600B2FB4D /* EmbossedButton.swift */; };
+		7A80A5DD27EE981F00D2DD93 /* HistoryBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80A5DC27EE981F00D2DD93 /* HistoryBarView.swift */; };
 		7A8BEE9B27DD92B100AC2CB3 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEE9727DD92B100AC2CB3 /* squat.mp4 */; };
 		7A8BEE9C27DD92B100AC2CB3 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEE9827DD92B100AC2CB3 /* sun-salute.mp4 */; };
 		7A8BEE9D27DD92B100AC2CB3 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEE9927DD92B100AC2CB3 /* step-up.mp4 */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		7A3466FD27E1F7CF0024161D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		7A640BD027E9E41600B2FB4D /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
+		7A80A5DC27EE981F00D2DD93 /* HistoryBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBarView.swift; sourceTree = "<group>"; };
 		7A8BEE9727DD92B100AC2CB3 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat.mp4; sourceTree = "<group>"; };
 		7A8BEE9827DD92B100AC2CB3 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
 		7A8BEE9927DD92B100AC2CB3 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				7AE08F6B27DE0C070071C251 /* RatingView.swift */,
 				7AF2D5CE27DF55460040D5F9 /* HistoryView.swift */,
 				7AD59ADA27EDFDD200FEDCB4 /* HistoryListView.swift */,
+				7A80A5DC27EE981F00D2DD93 /* HistoryBarView.swift */,
 				7AF2D5D427DF607D0040D5F9 /* SuccessView.swift */,
 				7A3466FD27E1F7CF0024161D /* TimerView.swift */,
 				7AA70F9027E8974B003A6A21 /* RaisedButton.swift */,
@@ -245,6 +248,7 @@
 				7AE90BF827EB316F000DE76F /* WelcomeImages.swift in Sources */,
 				7A3466FE27E1F7CF0024161D /* TimerView.swift in Sources */,
 				7AF2D5CF27DF55460040D5F9 /* HistoryView.swift in Sources */,
+				7A80A5DD27EE981F00D2DD93 /* HistoryBarView.swift in Sources */,
 				7AE08F6A27DD9DD00071C251 /* HeaderView.swift in Sources */,
 				7AF2D5D527DF607D0040D5F9 /* SuccessView.swift in Sources */,
 				7A8BEEA227DD946000AC2CB3 /* ExerciseView.swift in Sources */,

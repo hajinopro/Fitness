@@ -23,4 +23,10 @@ extension Date {
     func isSameDay(as day: Date) -> Bool {
         return self.yearMonthDay == day.yearMonthDay
     }
+    
+    func lastSevenDays() -> [Date] {
+        (-6...0).map {
+            Calendar.current.date(byAdding: .day, value: $0, to: Date()) ?? Date()
+        }
+    }
 }
