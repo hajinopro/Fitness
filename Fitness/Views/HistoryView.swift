@@ -9,12 +9,17 @@ import SwiftUI
 
 struct HistoryView: View {
     @EnvironmentObject var history: HistoryStore
-    @Binding var showHistory: Bool
+    @Environment(\.dismiss) private var dismiss
+    @State private var layout: LayoutType = .list
+    
+    enum LayoutType {
+        case list, bar
+    }
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Button(action: { showHistory.toggle() } ) {
-                Image(systemName: "xmark.circle")
+            Button(action: { dismiss() } ) {
+                Image(systemName: "xmark")
             }
             .font(.title)
             .padding([.top, .trailing])
@@ -22,15 +27,54 @@ struct HistoryView: View {
                 Text("History")
                     .font(.title)
                     .padding()
-                Form {
-                    ForEach(history.exerciseDays) { day in
-                        Section {
-                            ForEach(day.exercises, id: \.self) { exercise in
-                                Text(exercise)
+                HStack {
+                    if layout == .list {
+                        Button {
+                            layout = .bar
+                        } label: {
+                            Image(systemName: "square.grid.2x2.fill")
+                                .padding([.leading, .trailing], 20)
+                        }
+                        .buttonStyle(EmbossedButtonStyle())
+                        
+                        Button {
+                            layout = .bar
+                        } label: {
+                            Image(systemName: "chart.bar.fill")
+                                .padding([.leading, .trailing], 20)
+                                .foregroundColor(.gray)
+                        }
+                    } else {
+                        Button {
+                            layout = .list
+                        } label: {
+                            Image(systemName: "square.grid.2x2.fill")
+                                .padding([.leading, .trailing], 20)
+                                .foregroundColor(.gray)
+                        }
+                        
+                        Button {
+                            layout = .list
+                        } label: {
+                            Image(systemName: "chart.bar.fill")
+                                .padding([.leading, .trailing], 20)
+                        }
+                        .buttonStyle(EmbossedButtonStyle())
+                    }
+                }
+                if layout == .list {
+                    HistoryListView()
+                } else {
+                    Form {
+                        ForEach(history.exerciseDays) { day in
+                            Section {
+                                ForEach(day.exercises, id: \.self) { exercise in
+                                    Text(exercise)
+                                }
+                            } header: {
+                                Text(day.date.formatted(as: "MMM dd"))
+                                    .font(.headline)
                             }
-                        } header: {
-                            Text(day.date.formatted(as: "MMM dd"))
-                                .font(.headline)
                         }
                     }
                 }
@@ -41,7 +85,8 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView(showHistory: .constant(true))
-            .environmentObject(HistoryStore())
+        HistoryView()
+            .environmentObject(HistoryStore(devData: true))
     }
 }
+

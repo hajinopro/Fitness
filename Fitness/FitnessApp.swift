@@ -38,6 +38,7 @@ struct FitnessApp: App {
                         Email support: support@xyz.com
                         """)
                 }
+            
         }
     }
 }

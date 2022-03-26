@@ -11,41 +11,38 @@ struct WelcomeView: View {
     @Binding var selectedTab: Int
     @State private var showHistory = false
     
+    var getStartedButton: some View {
+        RaisedButton(buttonText: "Get Started") {
+            selectedTab = 0
+        }
+        .padding()
+    }
+    
+    var historyButton: some View {
+        EmbossedButton(buttonText: "History", action: {
+            showHistory.toggle()
+        }, buttonShape: .capsule)
+        .padding(.bottom, 10)
+    }
+    
     var body: some View {
-        ZStack {
+        GeometryReader { geometry in
             VStack {
                 HeaderView(selectedTab: $selectedTab, titleText: "Welcome")
                 Spacer()
-                Button("History") {
-                    showHistory.toggle()
-                }
-                .sheet(isPresented: $showHistory, content: {
-                    HistoryView(showHistory: $showHistory)
-                })
-                .padding(.bottom)
-            }
-            VStack {
-                HStack(alignment: .bottom) {
-                    VStack(alignment: .leading) {
-                        Text("Get fit")
-                            .font(.largeTitle)
-                        Text("with high intensity interval training")
-                            .font(.headline)
+                ContainerView {
+                    VStack {
+                        WelcomeView.images
+                        WelcomeView.welcomeText
+                        getStartedButton
+                        Spacer()
+                        historyButton
                     }
-                    Image("step-up")
-                        .resizedTofill(width: 240, height: 240)
-                        .clipShape(Circle())
                 }
-                Button(action: { selectedTab = 0 }) {
-                    Text("Get Started")
-                    Image(systemName: "arrow.right.circle")
+                .frame(height: geometry.size.height * 0.8)
+                .sheet(isPresented: $showHistory) {
+                    HistoryView()
                 }
-                .font(.title2)
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(.gray, lineWidth: 2)
-                )
             }
         }
     }

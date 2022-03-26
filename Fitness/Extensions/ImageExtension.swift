@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Image {
-    func resizedTofill(width: CGFloat, height: CGFloat) -> some View {
+    func resizedToFill(width: CGFloat, height: CGFloat) -> some View {
         return self
             .resizable()
             .aspectRatio(contentMode: .fill)

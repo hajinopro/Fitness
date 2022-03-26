@@ -15,7 +15,7 @@ struct SuccessView: View {
         ZStack {
             VStack {
                 Image(systemName: "hand.raised.fill")
-                    .resizedTofill(width: 75, height: 75)
+                    .resizedToFill(width: 75, height: 75)
                     .foregroundColor(.purple)
                 Text("High Five!")
                     .font(.largeTitle)
@@ -31,8 +31,8 @@ struct SuccessView: View {
             VStack {
                 Spacer()
                 Button("Continue") {
-                    dismiss()
                     selectedTab = 9
+                    dismiss()
                 }
                 .padding(.bottom)
             }

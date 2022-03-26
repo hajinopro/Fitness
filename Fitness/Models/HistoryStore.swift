@@ -94,7 +94,6 @@ class HistoryStore: ObservableObject {
         } catch {
             throw FileError.loadFailure
         }
-        throw FileError.loadFailure
     }
 }
 
