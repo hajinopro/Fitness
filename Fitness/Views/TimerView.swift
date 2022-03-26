@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimerView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var timeRemaining = 3
+    @State private var timeRemaining = 30
     @Binding var timerDone: Bool
     let exerciseName: String
     let timer = Timer.publish(every: 1, on: .main, in: .common)
